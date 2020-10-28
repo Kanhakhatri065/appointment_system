@@ -1,12 +1,34 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="sign_up_doctor.php" method="POST">
+        <label>Username: </label>
+        <input type="text" name="username" autofocus />
 
-include('database_connection.php');
-$username = $_POST['username'];
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$city = $_POST['city'];
-$doctor_type = $_POST['doctor_type'];
-$email_id = $_POST['email_id'];
-$password = $_POST['password'];
+        <label>First Name: </label>
+        <input type="text" name="first_name" />
 
-$sql = "SELECT * FROM doctors WHERE doctor_email = '$email_id'";
+        <label>Last Name: </label>
+        <input type="text" name="last_name" />
+
+        <label>City: </label>
+        <input type="text" name="city" />
+
+        <label>Specialization: </label>
+        <input type="text" name="doctor_type">
+
+        <label>Email: </label>
+        <input type="email" name="email_id">
+
+        <label>Password: </label>
+        <input type="password" name="password">
+
+        <input type="submit" name="Submit" value="Submit" />
+    </form>
+</body>
+</html>

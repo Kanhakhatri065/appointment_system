@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="sign_up_doctor.php" method="POST">
+    <form action="sign_up_patient.php" method="POST">
         <label>Username: </label>
         <input type="text" name="username" autofocus />
 
@@ -19,9 +19,6 @@
         <label>City: </label>
         <input type="text" name="city" />
 
-        <label>Specialization: </label>
-        <input type="text" name="doctor_type">
-
         <label>Email: </label>
         <input type="email" name="email_id">
 
@@ -30,5 +27,8 @@
 
         <input type="submit" name="Submit" value="Submit" />
     </form>
+    <?php
+    echo "hello"
+    ?>
 </body>
 </html>
