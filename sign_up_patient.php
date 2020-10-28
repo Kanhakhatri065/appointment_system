@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="sign_up_patient.php" method="POST">
+    <form action="sign_up_patient_process.php" method="POST">
         <label>Username: </label>
         <input type="text" name="username" autofocus />
 

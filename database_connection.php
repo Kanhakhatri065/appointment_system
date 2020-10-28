@@ -2,10 +2,6 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-
-    $conn =  new mysqli($servername, $username, $password);
-
-    if($conn->connect_error) {
-        die("Connection failed : " . $conn->connect_error);
-    }
+   $conn = mysqli_connect("$servername", "$username", "", "appointment_system")or die($mysqli_error($con))
+   
 ?>
