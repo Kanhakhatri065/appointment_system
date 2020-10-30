@@ -27,8 +27,6 @@
 
         <input type="submit" name="Submit" value="Submit" />
     </form>
-    <?php
-    echo "hello"
-    ?>
+    
 </body>
 </html>
