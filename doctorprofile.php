@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 include('database_connection.php');
-$id="peddivarunkumar98@gmail.com";
+$id="peddivarunkumar991@gmail.com";
 $select_query="select * from doctors where doctor_email='$id'";
 $select_query_result=mysqli_query($conn,$select_query) or die(mysqli_error($conn)); 
 $row=mysqli_fetch_array($select_query_result);
@@ -57,6 +57,25 @@ $row=mysqli_fetch_array($select_query_result);
         </tr>
         
     </table>
-    
+    <h3>Add slots</h3>
+    <form action="addslots.php" method="POST">
+        <label>DAY</label>
+        <input type="text" name="day">
+        <label>start_time</label>
+        <input type="time" name="start">
+        <label>end_time</label>
+        <input type="time" name="end">
+        <input type="submit">
+    </form>
+    <h3>Delete slots of a particular day and time</h3>
+    <form action="deleteslots.php" method="POST">
+        <label>DAY</label>
+        <input type="text" name="day">
+        <label>start_time</label>
+        <input type="time" name="start">
+        <label>end_time</label>
+        <input type="time" name="end">
+        <input type="submit">
+    </form>
 </body>
 </html>

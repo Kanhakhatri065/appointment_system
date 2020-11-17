@@ -58,7 +58,13 @@
     <body>
         <?php
             //fetching the doctor_id from url
+            if(isset($_GET['doctor_id'])){
             $doctor_id = $_GET["doctor_id"];
+            }
+            if(isset($_SESSION['doctor_id'])){
+                $doctor_id=$_SESSION["doctor_id"];
+                
+            }
 
             //showing all the available slots of this doctor for this week
             $current_date = date('Y-m-d');
@@ -67,4 +73,4 @@
             }
         ?>
     </body>
-</html>
+</html

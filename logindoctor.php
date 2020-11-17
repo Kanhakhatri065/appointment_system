@@ -1,7 +1,7 @@
 <?php
 require("database_connection.php");
 if (isset($_SESSION['doctor_email'])) {
-    header('location: book_appointments.php');
+    header('location: doctorprofile.php');
 }
 ?>
 <!DOCTYPE html>
