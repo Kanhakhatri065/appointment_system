@@ -1,7 +1,8 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <?php
 include('database_connection.php');
-$id="peddivarunkumar991@gmail.com";
+$id=$_SESSION['doctor_id'];
 $select_query="select * from doctors where doctor_email='$id'";
 $select_query_result=mysqli_query($conn,$select_query) or die(mysqli_error($conn)); 
 $row=mysqli_fetch_array($select_query_result);
@@ -59,12 +60,14 @@ $row=mysqli_fetch_array($select_query_result);
     </table>
     <h3>Add slots</h3>
     <form action="addslots.php" method="POST">
+        <label>Date</label>
+         <input type="text" name="date">
         <label>DAY</label>
         <input type="text" name="day">
         <label>start_time</label>
-        <input type="time" name="start">
+        <input type="text" name="start">
         <label>end_time</label>
-        <input type="time" name="end">
+        <input type="text" name="end">
         <input type="submit">
     </form>
     <h3>Delete slots of a particular day and time</h3>
@@ -72,9 +75,9 @@ $row=mysqli_fetch_array($select_query_result);
         <label>DAY</label>
         <input type="text" name="day">
         <label>start_time</label>
-        <input type="time" name="start">
+        <input type="text" name="start">
         <label>end_time</label>
-        <input type="time" name="end">
+        <input type="text" name="end">
         <input type="submit">
     </form>
 </body>

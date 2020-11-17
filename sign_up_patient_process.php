@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('database_connection.php');
 $username = $_POST['username'];
 $username=mysqli_real_escape_string($conn,$username);//my_sqli_function here is being used to remove the
@@ -25,5 +25,4 @@ $insert_query="INSERT INTO patients(username,first_name,last_name,patient_city,p
         . "('$username','$first_name','$last_name','$city','$email_id','$password')";
 
 $insert_query_result=mysqli_query($conn,$insert_query)or die(mysqli_error($conn));
-
 ?>

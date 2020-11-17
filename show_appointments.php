@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
-    //database connection inclusion
+    session_start();
+//database connection inclusion
     include("database_connection.php");
     function showAppointments($doctor_id, $current_date, $day_number) {
         $date_and_day = strtotime($current_date);
@@ -61,11 +62,8 @@
             if(isset($_GET['doctor_id'])){
             $doctor_id = $_GET["doctor_id"];
             }
-            if(isset($_SESSION['doctor_id'])){
-                $doctor_id=$_SESSION["doctor_id"];
-                
-            }
-
+            
+            
             //showing all the available slots of this doctor for this week
             $current_date = date('Y-m-d');
             for($day_number = 0;$day_number < 7;$day_number++) {
