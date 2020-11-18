@@ -4,29 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/loginpagesstyle.css">
 </head>
 <body>
+    <center>
+    <div style="margin-top:100px;background-color:#9AD3BC;">
     <form action="sign_up_patient_process.php" method="POST">
+        <table>
+            <tr>
+                <td>
         <label>Username: </label>
-        <input type="text" name="username" autofocus />
-
-        <label>First Name: </label>
-        <input type="text" name="first_name" />
-
-        <label>Last Name: </label>
-        <input type="text" name="last_name" />
-
-        <label>City: </label>
-        <input type="text" name="city" />
-
+                </td>
+                <td>
+                    <input type="text" name="username" autofocus />
+                </td>
+        </tr>
+         <tr>
+                <td>
+          <label>First Name: </label>
+                </td>
+                <td>
+                       <input type="text" name="first_name" />
+                </td>
+        </tr>
+         <tr>
+                <td>
+        <label>Last Name: </label> 
+                </td>
+                <td>
+                     <input type="text" name="last_name" />
+                </td>
+        </tr>
+         <tr>
+                <td>
+       <label>City: </label>
+                </td>
+                <td>
+                     <input type="text" name="city" />
+                </td>
+        </tr>
+         
+         <tr>
+                <td>
         <label>Email: </label>
-        <input type="email" name="email_id">
-
-        <label>Password: </label>
-        <input type="password" name="password">
-
+                </td>
+                <td>
+                     <input type="email" name="email_id">
+                </td>
+        </tr>
+      <tr>
+                <td>
+       <label>Password: </label>
+                </td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+        </tr>
+     </table>
         <input type="submit" name="Submit" value="Submit" />
     </form>
+        <a href="loginpatient.php"><button>Already have an account</button></a>
+    </div>
+</center>
     
 </body>
 </html>
